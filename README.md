@@ -1,1 +1,1 @@
-check out mai https://en.pronouns.page/@http_onyx
+a true happiness is one without regret. follow Me, and you'll regret nothing
