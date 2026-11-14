@@ -1,0 +1,149 @@
+body {
+    animation-name: none !important;
+    animation-duration: 0 !important;
+    animation-iteration-count: infinite !important;
+}
+
+body.pixel-mode * {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+body {
+    padding: 12px;
+    padding-top: 64px;
+    max-width: 5000px;
+    margin: auto;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    cursor: url(poodles/cheesecursor.png), auto;
+}
+
+a,
+button,
+p,
+summary {
+    cursor: url(poodles/cheesecursor2.png), pointer !important;
+}
+
+.specimen {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-direction: column;
+}
+
+.poodle-collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 20px;
+    border: 2px solid gold;
+    outline: 2px dashed black;
+}
+
+.logo {
+    width: 100%;
+}
+
+header {
+    font-size: 15pt;
+    background-color: black;
+    color: white;
+    margin-bottom: 16px;
+    padding: 8px;
+}
+
+.image-frame {
+    position: relative;
+    display: inline-block;
+    margin: 32px;
+
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    will-change: transform;
+}
+
+
+.image-frame::after {
+    transform: translateZ(20px);
+}
+
+.content p {
+    font-size: 15pt;
+}
+
+.image-frame::after {
+    content: "";
+    position: absolute;
+    top: -36px;
+    right: -32px;
+    bottom: -19px;
+    left: -40px;
+    background-image: url("/poodles/frame.gif");
+    background-size: contain;
+    background-repeat: round;
+    pointer-events: none;
+}
+
+.simple-frame {
+    background: linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat,
+        linear-gradient(#ffe316 0%, #feecb0 100%);
+    border-radius: 0px;
+    outline: 3px solid black;
+    padding: 5px;
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
+}
+
+.photo {
+    display: block;
+    object-fit: fill;
+    object-position: center;
+}
+
+.collapsible {
+    border: 1px black solid;
+    outline: 1px gold solid;
+    border-radius: 6px;
+    padding: 10px 14px;
+    max-width: 500px;
+    background: rgb(255, 242, 227);
+    max-width: 240px;
+}
+
+.collapsible summary {
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapsible summary::-webkit-details-marker {
+    display: none;
+}
+
+summary {
+    font-size: 1.1em;
+    font-style: normal;
+}
+
+.collapsible summary::after {
+    content: "!";
+    font-size: 1.3em;
+}
+
+.collapsible[open] summary::after {
+    content: "X";
+}
+
+.collapsible-content {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed black;
+}
